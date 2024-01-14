@@ -6,6 +6,7 @@
 sudo apt-get update && sudo apt-get upgrade -y
 # 安装常用工具
 echo "安装常用工具"
+apt install curl wget unzip htop screen ffmpeg net-tools iputils-ping vim neovim nano -y
 #⭐️#apt install curl wget unzip htop screen ffmpeg net-tools iputils-ping vim neovim nano
 #apt install curl wget unzip htop screen ffmpeg net-tools iputils-ping vim neovim nano -qq
 #
