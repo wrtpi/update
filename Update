@@ -6,7 +6,8 @@ apt update && apt upgrade -y
 # 安装常用工具
 sleep 1 
 echo " 安装常用工具"
-apt install curl wget unzip htop screen ffmpeg net-tools iputils-ping vim neovim nano -y
+#apt install curl wget unzip htop screen ffmpeg net-tools iputils-ping vim neovim nano -y
+apt install curl wget unzip htop screen ffmpeg net-tools iputils-ping vim neovim nano -qq
 #
 sleep 1 
 echo "显示系统当前使用的IP和地区"
