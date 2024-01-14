@@ -4,7 +4,7 @@
 # 更新软件包列表 升级已安装的软件包
 apk update && apk upgrade
 # 安装常用工具
-apk add -y curl wget unzip htop screen ffmpeg net-tools vim neovim nano tar
+apk add  curl wget unzip htop screen ffmpeg net-tools iputils-ping vim neovim nano -y
 #
 # 显示系统当前使用的IP和地区
 curl cip.cc
