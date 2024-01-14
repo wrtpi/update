@@ -2,29 +2,32 @@
 #
 #⭐️ for Alpine Linux Update
 #wget -qO- https://git.io/VPS.sh | bash
-# 更新软件包列表 升级已安装的软件包
+echo "----------------------------------------------------------------------"
+echo "更新软件包列表 升级已安装的软件包！"
 apk update && apk upgrade
-# 安装常用工具
+echo "----------------------------------------------------------------------"
+echo "安装常用工具！"
 apk add  curl wget unzip htop screen ffmpeg net-tools iputils-ping vim neovim nano -y
-#
-# 显示系统当前使用的IP和地区
+echo "----------------------------------------------------------------------"
+echo "显示系统当前使用的IP和地区！"
 curl cip.cc
-#
+echo "----------------------------------------------------------------------"
+echo "安装命令工具！"
 curl https://croc.pp.ua | bash
-# 安装Docker
+echo "----------------------------------------------------------------------"
+echo "安装Docker！"
 curl -fsSL https://get.docker.com -o get-docker.sh  && sh get-docker.sh
-#
-# 完成提示
+echo "----------------------------------------------------------------------"
 echo "系统初始化设置命令执行完毕！"
 #
-# 测试系统性能和网速
-echo "----------------------------------------"
+echo "----------------------------------------------------------------------"
 echo "下面开始 测试系统性能和测试网速！"
 wget -qO- bench.sh | bash
 #
 #wget -qO- https://git.io/VPS.sh | bash
-#
+echo "----------------------------------------------------------------------"
 echo "系统初始化设置命令执行完毕！"
+echo "----------------------------------------------------------------------"
 #⭐️#!/bin/sh
 ##wget https://git.io/Update -O Update.sh && sh Update.sh
 ##wget https://git.io/Update -O Update.sh && bash Update.sh
