@@ -7,7 +7,8 @@ echo "更新软件包列表 升级已安装的软件包！"
 apk update && apk upgrade
 echo "----------------------------------------------------------------------"
 echo "安装常用工具！"
-apk add  curl wget unzip htop screen ffmpeg net-tools iputils-ping vim neovim nano -y
+#apk add  curl wget unzip htop screen ffmpeg net-tools iputils-ping vim neovim nano -y
+apk add  curl wget unzip htop screen ffmpeg net-tools iputils-ping vim neovim nano
 echo "----------------------------------------------------------------------"
 echo "显示系统当前使用的IP和地区！"
 curl cip.cc
