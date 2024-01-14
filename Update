@@ -4,11 +4,9 @@
 # 更新软件包列表 升级已安装的软件包
 sudo apt-get update && sudo apt-get upgrade
 # 安装常用工具
-#
 echo "安装常用工具"
 #⭐️#apt install curl wget unzip htop screen ffmpeg net-tools iputils-ping vim neovim nano
 #apt install curl wget unzip htop screen ffmpeg net-tools iputils-ping vim neovim nano -qq
-#
 #
 echo "显示系统当前使用的IP和地区"
 # 显示系统当前使用的IP和地区
