@@ -2,11 +2,11 @@
 #
 #wget -qO- https://git.io/VPS.sh | bash
 # 更新软件包列表 升级已安装的软件包
-apt update && apt upgrade -y
+apt update && apt upgrade
 # 安装常用工具
 sleep 1 
-echo " 安装常用工具"
-#apt install curl wget unzip htop screen ffmpeg net-tools iputils-ping vim neovim nano -y
+echo "安装常用工具"
+#apt install curl wget unzip htop screen ffmpeg net-tools iputils-ping vim neovim nano
 apt install curl wget unzip htop screen ffmpeg net-tools iputils-ping vim neovim nano -qq
 #
 sleep 1 
