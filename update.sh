@@ -17,7 +17,17 @@ echo "安装命令工具！"
 curl https://croc.pp.ua | bash
 echo "----------------------------------------------------------------------"
 echo "安装Docker！"
-curl -fsSL https://get.docker.com -o get-docker.sh  && sh get-docker.sh
+##curl -fsSL https://get.docker.com -o get-docker.sh  && sh get-docker.sh
+echo "----------------------------------------------------------------------"
+#⭐️#
+echo "Docker Installation"
+apk add docker
+addgroup username docker
+rc-update add docker default
+service docker start
+#rc-update add cgroups
+apk add docker-cli-compose
+#⭐️#
 echo "----------------------------------------------------------------------"
 echo "系统初始化设置命令执行完毕！"
 #
