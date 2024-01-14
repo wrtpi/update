@@ -2,8 +2,7 @@
 #
 #wget -qO- https://git.io/VPS.sh | bash
 # 更新软件包列表 升级已安装的软件包
-apt update
-#apt upgrade
+sudo apt-get update && sudo apt-get upgrade -qq
 # 安装常用工具
 
 echo "安装常用工具"
