@@ -1,14 +1,14 @@
 #!/bin/bash
 #
-#⭐️ for Alpine Linux Update
+#⭐️# for Alpine Linux Update
 #wget -qO- https://git.io/VPS.sh | bash
 echo "----------------------------------------------------------------------"
 echo "更新软件包列表 升级已安装的软件包！"
 apk update && apk upgrade
 echo "----------------------------------------------------------------------"
-echo "安装常用工具！"
-#apk add  curl wget unzip htop screen ffmpeg net-tools iputils-ping vim neovim nano -y
+echo "安装常用工具！no -y"
 apk add  curl wget unzip htop screen ffmpeg net-tools iputils-ping vim neovim nano
+#⭐️#
 echo "----------------------------------------------------------------------"
 echo "显示系统当前使用的IP和地区！"
 curl cip.cc
@@ -23,6 +23,7 @@ echo "系统初始化设置命令执行完毕！"
 #
 echo "----------------------------------------------------------------------"
 echo "下面开始 测试系统性能和测试网速！"
+#⭐️#
 wget -qO- bench.sh | bash
 #
 #wget -qO- https://git.io/VPS.sh | bash
