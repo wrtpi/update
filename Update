@@ -2,6 +2,12 @@
 # 之前被Windows编辑符号^M搞死！！！
 # wget -qO- https://git.io/VPS.sh | bash
 echo "----------------------------------------------------------------------"
+echo "Set up IPV6 DNS resolution IPv4 DomainName"
+sleep 2
+##mv /etc/resolv.conf /etc/resolv.conf.bak && echo -e "nameserver 2001:67c:2b0::4\nnameserver 2001:67c:2b0::6" > /etc/resolv.conf
+mv /etc/resolv.conf /etc/resolv.conf.bak && echo -e "nameserver 2001:67c:2b0::4\nnameserver 2001:67c:2b0::6\nnameserver 8.8.8.8\nnameserver 1.1.1.1" > /etc/resolv.conf
+#⭐️#
+echo "----------------------------------------------------------------------"
 echo "更新软件包列表 升级已安装的软件包"
 sleep 2
 apt-get update
