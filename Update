@@ -11,6 +11,10 @@ apt install curl wget unzip htop screen ffmpeg net-tools iputils-ping vim neovim
 #⭐️#apt install curl wget unzip htop screen ffmpeg net-tools iputils-ping vim neovim nano
 #apt install curl wget unzip htop screen ffmpeg net-tools iputils-ping vim neovim nano -qq
 echo "----------------------------------------------------------------------"
+#⭐️#
+echo "一键设置Linux终端支持中文显示"
+wget -N --no-check-certificate https://raw.githubusercontent.com/wrtpi/zh_CN/master/zh_CN.sh && bash zh_CN.sh
+echo "----------------------------------------------------------------------"
 echo "显示系统当前使用的IP和地区"
 #⭐️# 显示系统当前使用的IP和地区
 curl cip.cc
