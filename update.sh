@@ -1,42 +1,68 @@
 #!/bin/bash
-#
-#⭐️# for Alpine Linux Update
-#wget -qO- https://git.io/VPS.sh | bash
+# 之前被Windows编辑符号^M搞死！！！
+# wget -qO- https://git.io/VPS.sh | bash
 echo "----------------------------------------------------------------------"
-echo "更新软件包列表 升级已安装的软件包！"
+echo "更新软件包列表 升级已安装的软件包"
+sleep 2
 apk update && apk upgrade
 echo "----------------------------------------------------------------------"
-echo "安装常用工具！no -y"
+sleep 2
+echo "安装常用工具"
 apk add  curl wget unzip htop screen ffmpeg net-tools iputils-ping vim neovim nano
+#⭐️#apt install curl wget unzip htop screen ffmpeg net-tools iputils-ping vim neovim nano
+#apt install curl wget unzip htop screen ffmpeg net-tools iputils-ping vim neovim nano -qq
+echo "----------------------------------------------------------------------"
 #⭐️#
-echo "----------------------------------------------------------------------"
-echo "显示系统当前使用的IP和地区！"
-curl cip.cc
-echo "----------------------------------------------------------------------"
-echo "安装命令工具！"
+echo "安装命令工具"
 curl https://croc.889.pp.ua | bash
 echo "----------------------------------------------------------------------"
-echo "安装Docker！"
-##curl -fsSL https://get.docker.com -o get-docker.sh  && sh get-docker.sh
-echo "----------------------------------------------------------------------"
 #⭐️#
-echo "Docker Installation"
+echo "设置时区为亚洲/上海"
+#timedatectl set-timezone Asia/Shanghai
+apk add tzdata
+ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+#⭐️# 显示系统当前查看时间和时区
+#timedatectl
+date
+timedatectl show --property=Timezone
+echo "----------------------------------------------------------------------"
+echo "一键设置Linux终端支持中文显示"
+sleep 2
+#wget -N --no-check-certificate https://raw.githubusercontent.com/wrtpi/zh_CN/master/zh_CN.sh && bash zh_CN.sh
+echo "----------------------------------------------------------------------"
+echo "显示系统当前使用的IP和地区"
+#⭐️# 显示系统当前使用的IP和地区
+curl cip.cc
+echo "----------------------------------------------------------------------"
+sleep 2
+#⭐️#
+echo "安装开源的Docker容器化相关组件"
+sleep 2
+#curl -fsSL https://get.docker.com -o get-docker.sh  && sh get-docker.sh
 apk add docker
 addgroup username docker
 rc-update add docker default
 service docker start
 #rc-update add cgroups
 apk add docker-cli-compose
-#⭐️#
-echo "----------------------------------------------------------------------"
-echo "系统初始化设置命令执行完毕！"
 #
 echo "----------------------------------------------------------------------"
-echo "下面开始 测试系统性能和测试网速！"
+echo "系统初始化设置命令执行完毕！"
+echo "----------------------------------------------------------------------"
 #⭐️#
+echo "----------------------------------------------------------------------"
+echo "下面开始 测试系统性能和测试网速！"
+echo "----------------------------------------------------------------------"
+#⭐️#
+sleep 2
 wget -qO- bench.sh | bash
 #
 #wget -qO- https://git.io/VPS.sh | bash
+echo "----------------------------------------------------------------------"
+echo "系统初始化设置命令执行完毕！"
+##########################################################
+#⭐️#
+##########################################################
 echo "----------------------------------------------------------------------"
 echo "系统初始化设置命令执行完毕！"
 echo "----------------------------------------------------------------------"
