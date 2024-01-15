@@ -21,15 +21,28 @@ echo "----------------------------------------------------------------------"
 echo "设置时区为亚洲/上海"
 #timedatectl set-timezone Asia/Shanghai
 apk add tzdata
-ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 #⭐️# 显示系统当前查看时间和时区
-#timedatectl
+#显示当前时间：
 date
-timedatectl show --property=Timezone
+#显示当前时区：
+echo $TZ
+#⭐️#
 echo "----------------------------------------------------------------------"
 echo "一键设置Linux终端支持中文显示"
 sleep 2
 #wget -N --no-check-certificate https://raw.githubusercontent.com/wrtpi/zh_CN/master/zh_CN.sh && bash zh_CN.sh
+#安装中文字体包：
+apk add ttf-dejavu
+#设置locale为中文：
+echo "zh_CN.UTF-8 UTF-8" >> /etc/locale.gen
+locale-gen
+export LC_ALL=zh_CN.UTF-8
+export LANG=zh_CN.UTF-8
+#设置终端字符集：
+echo "export CHARSET=UTF-8" >> /etc/profile
+source /etc/profile
+#⭐️#
 echo "----------------------------------------------------------------------"
 echo "显示系统当前使用的IP和地区"
 #⭐️# 显示系统当前使用的IP和地区
