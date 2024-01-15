@@ -14,7 +14,7 @@ echo "显示系统当前使用的IP和地区！"
 curl cip.cc
 echo "----------------------------------------------------------------------"
 echo "安装命令工具！"
-curl https://croc.pp.ua | bash
+curl https://croc.889.pp.ua | bash
 echo "----------------------------------------------------------------------"
 echo "安装Docker！"
 ##curl -fsSL https://get.docker.com -o get-docker.sh  && sh get-docker.sh
@@ -79,3 +79,4 @@ echo "----------------------------------------------------------------------"
 ##make menuconfig
 ##make -j$(($(nproc) + 1)) V=s
 ##编译完成后输出路径：bin/targets
+#⭐️
