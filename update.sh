@@ -53,13 +53,13 @@ echo "----------------------------------------------------------------------"
 #⭐️#
 echo "给系统增加SWAP虚拟分区文件，文件大小可以自己输入，默认可以是1024MB！"
 sleep 2
-curl -L https://raw.githubusercontent.com/spiritLHLS/addswap/main/addswap.sh -o addswap.sh && chmod +x addswap.sh && bash addswap.sh
+echo -e "1\n1024" | bash <(curl -s -L https://raw.githubusercontent.com/wrtpi/addswap/main/addswap.sh)
 #⭐️#
 echo "----------------------------------------------------------------------"
 echo "下面开始 测试系统性能和测试网速！"
 echo "----------------------------------------------------------------------"
 #⭐️#
-sleep 2
+sleep 6
 wget -qO- bench.sh | bash
 #
 #wget -qO- https://git.io/VPS.sh | bash
