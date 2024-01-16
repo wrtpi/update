@@ -5,7 +5,41 @@
 echo "----------------------------------------------------------------------"
 echo "请更新系统密码"
 sleep 2
-passwd
+echo "----------------------------------------------------------------------"
+#wget -qO- https://raw.githubusercontent.com/wrtpi/update/main/passwdupdate | bash
+wget -qO passwall.sh gg.gg/passwall
+chmod +x passwall.sh
+#./passwall.sh
+# 提示用户输入新密码
+echo "Enter new password:"
+# 通过交互式环境调用stty命令
+stty -echo
+# 读取用户输入的新密码
+read new_password
+# 启用输入回显
+stty echo
+#
+# 提示用户输入验证密码
+echo "Confirm new password:"
+# 通过交互式环境调用stty命令
+stty -echo
+# 读取用户输入的验证密码
+read confirm_password
+# 启用输入回显
+stty echo
+# 执行脚本，并将读取的密码作为参数传递
+./passwall.sh </dev/tty  "$new_password" "$confirm_password"
+rm -rf passwall.sh
+#⭐️#
+echo "----------------------------------------------------------------------"
+echo "稍等60秒后继续执行程序 ------>------>------>------>------>------>------>"
+sleep 60
+echo "Set up IPV6 DNS resolution IPv4 DomainName"
+sleep 2
+##mv /etc/resolv.conf /etc/resolv.conf.bak && echo -e "nameserver 2001:67c:2b0::4\nnameserver 2001:67c:2b0::6" > /etc/resolv.conf
+mv /etc/resolv.conf /etc/resolv.conf.bak && echo -e "nameserver 2001:67c:2b0::4\nnameserver 2001:67c:2b0::6\nnameserver 8.8.8.8\nnameserver 1.1.1.1" > /etc/resolv.conf
+#⭐️#
+echo "----------------------------------------------------------------------"
 echo "----------------------------------------------------------------------"
 echo "更新软件包列表 升级已安装的软件包"
 sleep 2
