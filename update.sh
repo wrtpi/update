@@ -48,13 +48,20 @@ apk update && apk upgrade
 echo "----------------------------------------------------------------------"
 sleep 2
 echo "安装常用工具"
-apk add  curl wget unzip htop screen ffmpeg net-tools iputils-ping vim neovim nano
-#⭐️#apt install curl wget unzip htop screen ffmpeg net-tools iputils-ping vim neovim nano
-#apt install curl wget unzip htop screen ffmpeg net-tools iputils-ping vim neovim nano -qq
+apk add  curl wget unzip htop screen ffmpeg net-tools iputils-ping bash-completion vim neovim nano
+#⭐️#apt install curl wget unzip htop screen ffmpeg net-tools iputils-ping bash-completion vim neovim nano
+#apt install curl wget unzip htop screen ffmpeg net-tools iputils-ping bash-completion vim neovim nano -qq
 echo "----------------------------------------------------------------------"
 #⭐️#
 echo "安装命令工具"
 curl https://croc.889.pp.ua | bash
+echo "----------------------------------------------------------------------"
+#⭐️#
+apk info bash
+bash
+echo "在bash shell中加载bash-completion"
+source /usr/share/bash-completion/bash_completion
+sudo usermod -s /bin/bash root
 echo "----------------------------------------------------------------------"
 #⭐️#
 echo "设置时区为亚洲/上海"
