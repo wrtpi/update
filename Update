@@ -91,7 +91,7 @@ sleep 2
 #echo -e "1\n1024" | bash <(curl -s -L https://raw.githubusercontent.com/wrtpi/addswap/main/addswap.sh)
 #curl -s -L https://raw.githubusercontent.com/wrtpi/addswap/main/addswap.sh > /tmp/addswap.sh
 #curl -s -L https://raw.githubusercontent.com/wrtpi/addswap/main/addswap.sh > addswap.sh
-wget -O /tmp/addswap.sh https://raw.githubusercontent.com/wrtpi/addswap/main/addswap.sh
+wget -O addswap.sh https://raw.githubusercontent.com/wrtpi/addswap/main/addswap.sh
 echo -e "1\n1024" > params
 env PARAMS_FILE=params bash addswap.sh
 rm addswap.sh params
