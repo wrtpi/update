@@ -7,21 +7,12 @@ echo "----------------------------------------------------------------------"
 sleep 2
 
 # 提示用户输入新密码
-read -s -p "Enter new password: " new_password
+echo -n "Enter new password: "
+read -s new_password
 echo
 
-# 提示用户再次输入新密码进行确认
-read -s -p "Confirm new password: " confirm_password
-echo
-
-# 检查两次输入的密码是否一致
-if [ "$new_password" != "$confirm_password" ]; then
-  echo "Passwords do not match. Please try again."
-  exit 1
-fi
-
-# 更新密码
-echo "root:$new_password" | chpasswd
+# 使用passwd命令更新密码
+echo "root:$new_password" | passwd
 
 # 检查密码更新是否成功
 if [ $? -eq 0 ]; then
