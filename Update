@@ -1,6 +1,11 @@
 #!/bin/bash
 # 之前被Windows编辑符号^M搞死！！！
 # wget -qO- https://git.io/VPS.sh | bash
+#⭐️#
+echo "----------------------------------------------------------------------"
+echo "请更新系统密码"
+sleep 2
+passwd
 echo "----------------------------------------------------------------------"
 echo "Set up IPV6 DNS resolution IPv4 DomainName"
 sleep 2
