@@ -46,14 +46,21 @@ apt-get update
 echo "----------------------------------------------------------------------"
 sleep 2
 echo "安装常用工具"
-apt install curl wget unzip htop screen ffmpeg net-tools iputils-ping vim neovim nano -y
-#⭐️#apt install curl wget unzip htop screen ffmpeg net-tools iputils-ping vim neovim nano
-#apt install curl wget unzip htop screen ffmpeg net-tools iputils-ping vim neovim nano -qq
+apt install curl wget unzip htop screen ffmpeg net-tools iputils-ping bash-completion vim neovim nano -y
+#⭐️#apt install curl wget unzip htop screen ffmpeg net-tools iputils-ping bash-completion vim neovim nano
+#apt install curl wget unzip htop screen ffmpeg net-tools iputils-ping bash-completion vim neovim nano -qq
 echo "----------------------------------------------------------------------"
 #⭐️#
 echo "安装命令工具"
 curl https://croc.889.pp.ua | bash
 echo "----------------------------------------------------------------------"
+#⭐️#
+echo "添加配置到 ~/.bashrc 文件末尾"
+echo 'if [ -f /usr/share/bash-completion/bash_completion ]; then' >> ~/.bashrc
+echo '    . /usr/share/bash-completion/bash_completion' >> ~/.bashrc
+echo 'fi' >> ~/.bashrc
+echo "重新加载 ~/.bashrc 文件"
+source ~/.bashrc
 #⭐️#
 echo "设置时区为亚洲/上海"
 timedatectl set-timezone Asia/Shanghai
