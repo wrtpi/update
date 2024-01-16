@@ -91,10 +91,10 @@ sleep 2
 #echo -e "1\n1024" | bash <(curl -s -L https://raw.githubusercontent.com/wrtpi/addswap/main/addswap.sh)
 #curl -s -L https://raw.githubusercontent.com/wrtpi/addswap/main/addswap.sh > /tmp/addswap.sh
 #curl -s -L https://raw.githubusercontent.com/wrtpi/addswap/main/addswap.sh > addswap.sh
-wget -O addswap.sh https://raw.githubusercontent.com/wrtpi/addswap/main/addswap.sh
-echo -e "1\n1024" > params
-env PARAMS_FILE=params bash addswap.sh
-rm addswap.sh params
+#⭐️#wget -O addswap.sh https://raw.githubusercontent.com/wrtpi/addswap/main/addswap.sh
+#⭐️#echo -e "1\n1024" > params
+#⭐️#env PARAMS_FILE=params bash addswap.sh
+#⭐️#rm addswap.sh params
 #⭐️#
 echo "----------------------------------------------------------------------"
 echo "系统初始化设置命令执行完毕！"
@@ -110,5 +110,6 @@ wget -qO- bench.sh | bash
 #wget -qO- https://git.io/VPS.sh | bash
 echo "----------------------------------------------------------------------"
 echo "系统初始化设置命令执行完毕！"
+echo "----------------------------------------------------------------------"
 ##########################################################
 #⭐️#
