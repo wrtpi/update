@@ -6,19 +6,12 @@ echo "Please update the system password"
 echo "----------------------------------------------------------------------"
 sleep 2
 
-
 # 提示用户输入新密码
-echo -n "Enter new password: "
-stty -echo
-read new_password
-stty echo
+read -s -p "Enter new password: " new_password
 echo
 
 # 提示用户再次输入新密码进行确认
-echo -n "Confirm new password: "
-stty -echo
-read confirm_password
-stty echo
+read -s -p "Confirm new password: " confirm_password
 echo
 
 # 检查两次输入的密码是否一致
@@ -28,7 +21,7 @@ if [ "$new_password" != "$confirm_password" ]; then
 fi
 
 # 更新密码
-echo "root:$new_password" | chpasswd -e
+echo "root:$new_password" | chpasswd
 
 # 检查密码更新是否成功
 if [ $? -eq 0 ]; then
