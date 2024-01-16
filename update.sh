@@ -81,10 +81,17 @@ sleep 2
 #安装中文字体包：
 apk add ttf-dejavu
 #设置locale为中文：
+apk add --no-cache libc-utils
 echo "zh_CN.UTF-8 UTF-8" >> /etc/locale.gen
-locale-gen
+echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
+#locale-gen #在Alpine Linux中，没有locale-gen命令。
+#生成本地化环境
+localedef -i en_US -f UTF-8 en_US.UTF-8
+localedef -i zh_CN -f UTF-8 zh_CN.UTF-8
+#设置默认本地化环境：可以使用/etc/profile文件来设置默认的本地化环境
 export LC_ALL=zh_CN.UTF-8
 export LANG=zh_CN.UTF-8
+export LANG=en_US.UTF-8
 #设置终端字符集：
 echo "export CHARSET=UTF-8" >> /etc/profile
 source /etc/profile
@@ -113,6 +120,7 @@ echo "----------------------------------------------------------------------"
 #⭐️#
 echo "给系统增加SWAP虚拟分区文件，文件大小可以自己输入，默认可以是1024MB！"
 sleep 2
+echo -e "2\n1024" | bash <(curl -s -L https://raw.githubusercontent.com/wrtpi/addswap/main/addswap.sh)
 echo -e "1\n1024" | bash <(curl -s -L https://raw.githubusercontent.com/wrtpi/addswap/main/addswap.sh)
 #⭐️#
 echo "----------------------------------------------------------------------"
