@@ -5,12 +5,19 @@ echo "请更新系统密码"
 echo "Please update the system password"
 echo "----------------------------------------------------------------------"
 sleep 2
+
 # 提示用户输入新密码
-read -s -p "Enter new password: " new_password
+echo -n "Enter new password: "
+stty -echo
+read new_password
+stty echo
 echo
 
 # 提示用户再次输入新密码进行确认
-read -s -p "Confirm new password: " confirm_password
+echo -n "Confirm new password: "
+stty -echo
+read confirm_password
+stty echo
 echo
 
 # 检查两次输入的密码是否一致
