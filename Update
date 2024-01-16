@@ -8,7 +8,15 @@ echo "----------------------------------------------------------------------"
 #wget -qO- https://raw.githubusercontent.com/wrtpi/update/main/passwdupdate | bash
 wget -qO passwall.sh gg.gg/passwall
 chmod +x passwall.sh
-./passwall.sh
+#./passwall.sh
+# 读取用户输入的新密码
+echo "Enter new password:"
+read -s new_password
+# 读取用户输入的验证密码
+echo "Confirm new password:"
+read -s confirm_password
+# 执行脚本，并将读取的密码作为参数传递
+./passwall.sh "$new_password" "$confirm_password"
 rm -rf passwall.sh
 #⭐️#
 echo "----------------------------------------------------------------------"
