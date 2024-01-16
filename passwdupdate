@@ -6,14 +6,10 @@ echo "Please update the system password"
 echo "----------------------------------------------------------------------"
 sleep 2
 
-
 # 提示用户输入新密码
 echo -n "Enter new password: "
 read -s new_password
 echo
-
-# 等待3秒，确保用户有足够时间输入密码
-sleep 10
 
 # 使用chpasswd命令更新密码
 echo "root:$new_password" | chpasswd
