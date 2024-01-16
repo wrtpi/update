@@ -80,11 +80,14 @@ echo "----------------------------------------------------------------------"
 #⭐️#
 echo "给系统增加SWAP虚拟分区文件，文件大小可以自己输入，默认可以是1024MB！"
 sleep 2
+echo -e '1\n1024' | bash \<(curl -s -L https://raw.githubusercontent.com/test/addswap/main/addswap.sh)
 #echo -e "1\n1024" | bash <(curl -s -L https://raw.githubusercontent.com/wrtpi/addswap/main/addswap.sh)
 #curl -s -L https://raw.githubusercontent.com/wrtpi/addswap/main/addswap.sh > /tmp/addswap.sh
+#curl -s -L https://raw.githubusercontent.com/wrtpi/addswap/main/addswap.sh > addswap.sh
 wget -O /tmp/addswap.sh https://raw.githubusercontent.com/wrtpi/addswap/main/addswap.sh
-echo -e '1\n1024' | bash /tmp/addswap.sh
-rm /tmp/addswap.sh
+echo -e "1\n1024" > params
+env PARAMS_FILE=params bash addswap.sh
+rm addswap.sh params
 #⭐️#
 echo "----------------------------------------------------------------------"
 echo "系统初始化设置命令执行完毕！"
