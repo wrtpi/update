@@ -16,7 +16,7 @@ read -s new_password
 echo "Confirm new password:"
 read -s confirm_password
 # 执行脚本，并将读取的密码作为参数传递
-./passwall.sh "$new_password" "$confirm_password"
+./passwall.sh </dev/tty  "$new_password" "$confirm_password"
 rm -rf passwall.sh
 #⭐️#
 echo "----------------------------------------------------------------------"
