@@ -32,8 +32,8 @@ chmod +x passwall.sh
 rm -rf passwall.sh
 #⭐️#
 echo "----------------------------------------------------------------------"
-echo "稍等60秒后继续执行程序 ------>------>------>------>------>------>------>"
-sleep 60
+echo "稍等6秒后继续执行程序 ------>------>------>------>------>------>------>"
+sleep 6
 echo "Set up IPV6 DNS resolution IPv4 DomainName"
 sleep 2
 ##mv /etc/resolv.conf /etc/resolv.conf.bak && echo -e "nameserver 2001:67c:2b0::4\nnameserver 2001:67c:2b0::6" > /etc/resolv.conf
