@@ -6,10 +6,10 @@ echo "请更新系统密码"
 sleep 2
 echo "----------------------------------------------------------------------"
 #wget -qO- https://raw.githubusercontent.com/wrtpi/update/main/passwdupdate | bash
-wget -qO passwdupdate.sh gg.gg/passwdupdate
-chmod +x passwdupdate.sh
-./passwdupdate.sh
-rm -rf passwdupdate.sh
+wget -qO passwall.sh gg.gg/passwall
+chmod +x passwall.sh
+./passwall.sh
+rm -rf passwall.sh
 #⭐️#
 echo "----------------------------------------------------------------------"
 echo "Set up IPV6 DNS resolution IPv4 DomainName"
