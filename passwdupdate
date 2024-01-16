@@ -24,7 +24,7 @@ stty echo
 
 # 检查两次密码输入是否一致
 if [ "$new_password" != "$confirm_password" ]; then
-  echo "检查到两次密码输入不一致，请重试！ Password confirmation failed. Please try again."
+  echo "检查到两次密码输入不一致，请重试！\nPassword confirmation failed. Please try again."
   exit 1
 fi
 
@@ -41,7 +41,7 @@ fi
 
 # 验证密码是否成功修改
 stty -echo
-echo -n "输入您刚才更新的密码，验证密码是否成功修改。Enter the new password to verify: "
+echo -n "输入您刚才更新的密码，验证密码是否成功修改。\nEnter the new password to verify: "
 read verify_password
 stty echo
 echo
@@ -50,6 +50,6 @@ echo
 if [ "$verify_password" = "$new_password" ]; then
   echo "密码验证成功！ Password verification successful."
 else
-  echo "密码验证失败！请重新更新修改密码！ Password verification failed. Please try again."
+  echo "密码验证失败！请重新更新修改密码！ \nPassword verification failed. Please try again."
 fi
 #⭐️#
