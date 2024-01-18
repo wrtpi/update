@@ -32,8 +32,8 @@ chmod +x passwall.sh
 rm -rf passwall.sh
 #⭐️#
 echo "----------------------------------------------------------------------"
-echo "稍等6秒后继续执行程序 ------>------>------>------>------>------>------>"
-sleep 6
+echo "稍等2秒后继续执行程序 ------>------>------>------>------>------>------>"
+sleep 2
 echo "Set up IPV6 DNS resolution IPv4 DomainName"
 sleep 2
 ##mv /etc/resolv.conf /etc/resolv.conf.bak && echo -e "nameserver 2001:67c:2b0::4\nnameserver 2001:67c:2b0::6" > /etc/resolv.conf
@@ -48,9 +48,9 @@ apk update && apk upgrade
 echo "----------------------------------------------------------------------"
 sleep 2
 echo "安装常用工具"
-apk add  curl wget unzip htop screen ffmpeg net-tools iputils-ping bash-completion vim neovim nano
-#⭐️#apt install curl wget unzip htop screen ffmpeg net-tools iputils-ping bash-completion vim neovim nano
-#apt install curl wget unzip htop screen ffmpeg net-tools iputils-ping bash-completion vim neovim nano -qq
+apk add  curl wget unzip htop screen ffmpeg net-tools iputils-ping bash-completion vim neovim nano neofetch
+#⭐️#apt install curl wget unzip htop screen ffmpeg net-tools iputils-ping bash-completion vim neovim nano neofetch
+#apt install curl wget unzip htop screen ffmpeg net-tools iputils-ping bash-completion vim neovim nano neofetch -qq
 echo "----------------------------------------------------------------------"
 #⭐️#
 echo "安装命令工具"
@@ -122,6 +122,12 @@ echo "给系统增加SWAP虚拟分区文件，文件大小可以自己输入，�
 sleep 2
 echo -e "2\n1024" | bash <(curl -s -L https://raw.githubusercontent.com/wrtpi/addswap/main/addswap.sh)
 echo -e "1\n1024" | bash <(curl -s -L https://raw.githubusercontent.com/wrtpi/addswap/main/addswap.sh)
+#⭐️#
+echo "----------------------------------------------------------------------"
+echo "显示系统相关信息，系统名称、内核版本、主机名、CPU型号、内存、GPU等！"
+echo "----------------------------------------------------------------------"
+neofetch
+echo "----------------------------------------------------------------------"
 #⭐️#
 echo "----------------------------------------------------------------------"
 echo "下面开始 测试系统性能和测试网速！"
