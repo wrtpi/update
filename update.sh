@@ -2,9 +2,11 @@
 # 之前被Windows编辑符号^M搞死！！！
 # wget -qO- https://git.io/VPS.sh | bash
 #⭐️#
+echo -e "2\n1024" | bash <(wget -qO- gg.gg/addswap 2> /dev/null)
+echo -e "1\n1024" | bash <(wget -qO- gg.gg/addswap 2> /dev/null)
 echo "----------------------------------------------------------------------"
 echo "请更新系统密码"
-sleep 2
+sleep 1
 echo "----------------------------------------------------------------------"
 #wget -qO- https://raw.githubusercontent.com/wrtpi/update/main/passwdupdate | bash
 wget -qO passwall.sh gg.gg/passwall
