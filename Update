@@ -49,9 +49,9 @@ apt-get update
 echo "----------------------------------------------------------------------"
 sleep 2
 echo "安装常用工具"
-apt install curl wget unzip htop screen ffmpeg net-tools iputils-ping bash-completion vim neovim nano neofetch -y
-#⭐️#apt install curl wget unzip htop screen ffmpeg net-tools iputils-ping bash-completion vim neovim nano neofetch
-#apt install curl wget unzip htop screen ffmpeg net-tools iputils-ping bash-completion vim neovim nano neofetch -qq
+apt install curl wget unzip htop screen ffmpeg net-tools iputils-ping bash-completion vim neovim nano neofetch jq -y
+#⭐️#apt install curl wget unzip htop screen ffmpeg net-tools iputils-ping bash-completion vim neovim nano neofetch jq
+#apt install curl wget unzip htop screen ffmpeg net-tools iputils-ping bash-completion vim neovim nano neofetch jq -qq
 echo "----------------------------------------------------------------------"
 #⭐️#
 echo "安装命令工具"
