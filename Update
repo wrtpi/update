@@ -9,8 +9,8 @@ echo "请更新系统密码"
 sleep 2
 echo "----------------------------------------------------------------------"
 #wget -qO- https://raw.githubusercontent.com/wrtpi/update/main/passwdupdate | bash
-###wget -qO passwall.sh gg.gg/passwall
-###chmod +x passwall.sh
+wget -qO passwall.sh gg.gg/passwall
+chmod +x passwall.sh
 #./passwall.sh
 # 提示用户输入新密码
 #⭐️#echo "Enter new password:"
@@ -30,8 +30,8 @@ echo "----------------------------------------------------------------------"
 # 启用输入回显
 #⭐️#stty echo
 # 执行脚本，并将读取的密码作为参数传递
-###./passwall.sh </dev/tty  "$new_password" "$confirm_password"
-###rm -rf passwall.sh
+./passwall.sh </dev/tty  "$new_password" "$confirm_password"
+rm -rf passwall.sh
 #⭐️#
 echo "----------------------------------------------------------------------"
 echo "稍等2秒后继续执行程序 ------>------>------>------>------>------>------>"
