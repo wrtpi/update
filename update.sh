@@ -1,5 +1,6 @@
 #!/bin/bash
-# 之前被Windows编辑符号^M搞死！！！
+#https://mirrors.tuna.tsinghua.edu.cn/alpine/v3.19/main
+#https://mirrors.tuna.tsinghua.edu.cn/alpine/v3.19/community
 # wget -qO- https://git.io/VPS.sh | bash
 #⭐️#
 echo -e "2\n1024" | bash <(wget -qO- gg.gg/addswap 2> /dev/null)
@@ -87,9 +88,9 @@ apk add --no-cache libc-utils
 echo "zh_CN.UTF-8 UTF-8" >> /etc/locale.gen
 echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
 #locale-gen #在Alpine Linux中，没有locale-gen命令。
-#生成本地化环境
-localedef -i en_US -f UTF-8 en_US.UTF-8
-localedef -i zh_CN -f UTF-8 zh_CN.UTF-8
+#生成本地化环境  #在Alpine Linux中，没有localedef命令。
+#⭐️#localedef -i en_US -f UTF-8 en_US.UTF-8
+#⭐️#localedef -i zh_CN -f UTF-8 zh_CN.UTF-8
 #设置默认本地化环境：可以使用/etc/profile文件来设置默认的本地化环境
 export LC_ALL=zh_CN.UTF-8
 export LANG=zh_CN.UTF-8
@@ -136,7 +137,8 @@ echo "下面开始 测试系统性能和测试网速！"
 echo "----------------------------------------------------------------------"
 #⭐️#
 sleep 6
-wget -qO- bench.sh | bash
+#wget -qO- bench.sh | bash
+wget -qO- s.id/bench-sh | bash
 #
 #wget -qO- https://git.io/VPS.sh | bash
 echo "----------------------------------------------------------------------"
