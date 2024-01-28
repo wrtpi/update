@@ -8,7 +8,7 @@ echo "----------------------------------------------------------------------"
 echo "请更新系统密码"
 sleep 1
 echo "----------------------------------------------------------------------"
-#wget -qO- https://raw.githubusercontent.com/wrtpi/update/main/passwdupdate | bash
+#wget -qO- https://raw.gitmirror.com/wrtpi/update/main/passwdupdate | bash
 wget -qO passwall.sh gg.gg/passwall
 chmod +x passwall.sh
 #./passwall.sh
@@ -79,7 +79,7 @@ echo $TZ
 echo "----------------------------------------------------------------------"
 echo "一键设置Linux终端支持中文显示"
 sleep 2
-#wget -N --no-check-certificate https://raw.githubusercontent.com/wrtpi/zh_CN/master/zh_CN.sh && bash zh_CN.sh
+#wget -N --no-check-certificate https://raw.gitmirror.com/wrtpi/zh_CN/master/zh_CN.sh && bash zh_CN.sh
 #安装中文字体包：
 apk add ttf-dejavu
 #设置locale为中文：
@@ -122,8 +122,8 @@ echo "----------------------------------------------------------------------"
 #⭐️#
 echo "给系统增加SWAP虚拟分区文件，文件大小可以自己输入，默认可以是1024MB！"
 sleep 2
-echo -e "2\n1024" | bash <(curl -s -L https://raw.githubusercontent.com/wrtpi/addswap/main/addswap.sh)
-echo -e "1\n1024" | bash <(curl -s -L https://raw.githubusercontent.com/wrtpi/addswap/main/addswap.sh)
+echo -e "2\n1024" | bash <(curl -s -L https://raw.gitmirror.com/wrtpi/addswap/main/addswap.sh)
+echo -e "1\n1024" | bash <(curl -s -L https://raw.gitmirror.com/wrtpi/addswap/main/addswap.sh)
 #⭐️#
 echo "----------------------------------------------------------------------"
 echo "显示系统相关信息，系统名称、内核版本、主机名、CPU型号、内存、GPU等！"
