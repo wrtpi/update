@@ -51,9 +51,9 @@ apk update && apk upgrade
 echo "----------------------------------------------------------------------"
 sleep 2
 echo "安装常用工具"
-apk add sudo curl wget unzip htop screen ffmpeg net-tools iputils-ping bash-completion vim neovim nano neofetch jq
-#⭐️#apt install sudo curl wget unzip htop screen ffmpeg net-tools iputils-ping bash-completion vim neovim nano neofetch jq
-#apt install sudo curl wget unzip htop screen ffmpeg net-tools iputils-ping bash-completion vim neovim nano neofetch jq -qq
+apk add sudo curl wget unzip htop screen ffmpeg net-tools iptables ip6tables iputils-ping bash-completion vim neovim nano neofetch jq
+#⭐️#apt install sudo curl wget unzip htop screen ffmpeg net-tools iptables ip6tables iputils-ping bash-completion vim neovim nano neofetch jq
+#apt install sudo curl wget unzip htop screen ffmpeg net-tools iptables ip6tables iputils-ping bash-completion vim neovim nano neofetch jq -qq
 echo "----------------------------------------------------------------------"
 #⭐️#
 echo "安装命令工具"
